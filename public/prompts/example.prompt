@@ -1,0 +1,50 @@
+Objective:
+To translate CSV data into a graph structure composed of nodes and relationships.
+
+Instructions:
+1.Each row in the CSV represents multiple nodes, separated by columns.
+2.Each column in the CSV signifies a node.
+3.For relationships:
+(1).The first column serves as the source node.
+(2).The second column becomes the target node.
+(3).The header of the second column defines the label for this relationship (edge).
+4.For subsequent columns, the pattern remains consistent:
+(1).The preceding column becomes the source node.
+(2).The current column acts as the target node.
+(3).The header of the current column provides the relationship's label.
+5.Continue this pattern for additional columns, if present.
+6.Rows are separated by the newline symbol \n.
+7.If a node with an identical name already exists, reuse the existing node instead of creating a new one.
+
+Create the graph state as follows:
+
+CSV Data Example 1:
+unitCode,courseCode;CITS4009,62510;CITS4009,62530;
+
+Current State:
+{}
+
+Updated State:
+{ "nodes": [
+  { "id": 1, "label": "CITS4009", "color": "#ffffff" },
+  { "id": 2, "label": "62510", "color": "#00ff00" }
+],
+"edges": [
+  { "from": 1, "to": 2, "label": "courseCode" }
+]
+},
+{ "nodes": [
+  { "id": 1, "label": "CITS4009", "color": "#ffffff" },
+  { "id": 3, "label": "62530", "color": "#00ff00" }
+],
+"edges": [
+  { "from": 1, "to": 3, "label": "courseCode" }
+]
+}
+
+current state:
+$state
+
+prompt: $prompt
+
+new state:

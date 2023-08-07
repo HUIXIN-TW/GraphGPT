@@ -15,6 +15,7 @@
 - When the input is empty and users click "Generate", the default or random graph will be displayed
 - The Graph zone is not scrollable
 - The graph is not responsive to the size of the window.
+- Stateless and Stateful components require different format
 
 ### Natural Language → Knowledge Graph
 
@@ -61,3 +62,23 @@ Obtain all csv files from [AccreditationExplorer](https://github.com/nlp-tlp/Acc
 | role.csv                  | Units Role in Program Course             | <ul><li>unitCode: string, uniquely identify a unit</li><li>courseCode: string, uniquely identify a course</li><li>role: string, Conversion, Option or Conversion</li></ul>                                                                                                                   |
 | unit.csv                  | Units Information                        | <ul><li>unitCode: string, unit code</li><li>title: string</li><li>credit: integer, each unit has 6 points</li><li>programmingBased: integer, 0 or 1, 0 for non-programming-based, 1 for programming-based</li><li>availabilities: string</li></ul>                                           |
 | unit_activity_cbok.csv    | Unit-Activities-CBoK Mappings            | <ul><li>unitCode: uniquely identify a unit</li><li>unit: string, name of unit</li><li>activity: string, activity title of a unit</li><li>knowledge: string, CBoK knowledge area</li><li>taxonomy: string, Bloom’s taxonomy </li></ul>                                                        |
+
+
+## Demo
+
+First prompt
+```
+unitCode,courseCode\nCITS4009,62510\nCITS4009,62530
+```
+
+Second prompt
+
+```
+unitCode,title,credit,programmingBased,availabilities\nCITS4009,"Computational Data Analysis",6,1,"Semester 2 2021, Crawley (Face to face); Semester 2 2021, Crawley (Online-TT) [Contact hours: n/a];"
+```
+
+Third prompt
+
+```
+courseCode,title,abbreviation,CRICOSCode,degree\n62510,Master of Information Technology,MIT,083866G,PG\n62530,Master of Data Science,MDSc,093310E,PG
+```

@@ -11,7 +11,8 @@ const DEFAULT_PARAMS = {
   presence_penalty: 0,
 };
 
-const SELECTED_PROMPT = "STATELESS";
+const SELECTED_PROMPT = "STATEFUL"; //"STATELESS
+const FILE_PROMPT = "prompts/example.prompt"; //"prompts/stateless.prompt"; //"prompts/stateful.prompt";
 
 const options = {
   layout: {
@@ -104,7 +105,7 @@ function App() {
 
         // update the color of the node
         node.color = color;
-      } else if (update.length === 2 && update[0] == "DELETE") {
+      } else if (update.length === 2 && update[0] === "DELETE") {
         // delete the node at the given index
         const [_, index] = update;
 
@@ -130,13 +131,16 @@ function App() {
   };
 
   const queryStatelessPrompt = (prompt, apiKey) => {
-    fetch("prompts/stateless.prompt")
+    fetch(FILE_PROMPT)
       .then((response) => response.text())
       .then((text) => text.replace("$prompt", prompt))
       .then((prompt) => {
         console.log(prompt);
 
         const params = { ...DEFAULT_PARAMS, prompt: prompt, stop: "\n" };
+
+        console.log("Printing params")
+        console.log(params);
 
         const requestOptions = {
           method: "POST",
@@ -188,7 +192,7 @@ function App() {
   };
 
   const queryStatefulPrompt = (prompt, apiKey) => {
-    fetch("prompts/stateful.prompt")
+    fetch(FILE_PROMPT)
       .then((response) => response.text())
       .then((text) => text.replace("$prompt", prompt))
       .then((text) => text.replace("$state", JSON.stringify(graphState)))
@@ -196,6 +200,8 @@ function App() {
         console.log(prompt);
 
         const params = { ...DEFAULT_PARAMS, prompt: prompt };
+
+        console.log(params);
 
         const requestOptions = {
           method: "POST",
