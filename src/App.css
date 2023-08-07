@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&display=swap");
 
 .headerText {
-  font-family: 'Noticia Text';
+  font-family: "Noticia Text";
   font-weight: 900;
   font-size: 60px;
   text-align: center;
@@ -9,7 +9,7 @@
 }
 
 .subheaderText {
-  font-family: 'Noticia Text';
+  font-family: "Noticia Text";
   font-weight: 400;
   font-size: 20px;
   text-align: center;
@@ -18,7 +18,7 @@
 }
 
 .opensourceText {
-  font-family: 'Noticia Text';
+  font-family: "Noticia Text";
   font-weight: 400;
   font-size: 14px;
   text-align: center;
@@ -64,7 +64,7 @@
 }
 
 .footer {
-  font-family: 'Noticia Text';
+  font-family: "Noticia Text";
   font-weight: 400;
   font-size: 13px;
   text-align: center;
@@ -150,4 +150,30 @@
 
 .clearButton:hover {
   background-color: rgba(239, 239, 239, 0.8);
+}
+
+.fileInput {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+  padding: 0 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #f5f7fa, #e4e9ee);
+  cursor: pointer;
+  color: #555;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.fileInput:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #e4e9ee, #f5f7fa);
 }
