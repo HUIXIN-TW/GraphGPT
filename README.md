@@ -1,23 +1,5 @@
 # GraphGPT
-
-### Functions
-
-- [ ] Take csv files as input
-- [ ] Generate a graph from the csv files
-- [ ] Allow users to query the graph
-- [ ] Allow users to update the graph
-- [ ] Allow users to change the color of nodes
-- [ ] Allow users to change the color of edges
-- [ ] Allow users to export the graph as a triple class
-
-### Pssoible Issues
-
-- When the input is empty and users click "Generate", the default or random graph will be displayed
-- The Graph zone is not scrollable
-- The graph is not responsive to the size of the window.
-- Stateless and Stateful components require different format
-
-### Natural Language → Knowledge Graph
+## Natural Language → Knowledge Graph
 
 ![demo](demo.gif)
 
@@ -32,12 +14,51 @@ The current few-shot prompt guides GPT-3 in accurately understanding the JSON fo
 ## Prompts
 
 Prompts are located in the `public/prompts` folder.
+## Expected Functions
+
+- [ ] Take csv files as input
+- [ ] Generate a graph from the csv files
+- [ ] Allow users to query the graph
+- [ ] Allow users to update the graph
+- [ ] Allow users to change the color of nodes
+- [ ] Allow users to change the color of edges
+- [ ] Allow users to export the graph as a triple class
+
+## Possoible Issues
+
+- When the input is empty and users click "Generate", the default or random graph will be displayed
+- The Graph zone is not scrollable
+- The graph is not responsive to the size of the window.
+- Stateless and Stateful components require different format
 
 ## Setup
 
 1. Run `npm install` to download required dependencies (currently just [react-graph-vis](https://github.com/crubier/react-graph-vis)).
 2. Make sure you have an [OpenAI API key](https://platform.openai.com/account/api-keys). You will enter this into the web app when running queries.
 3. Run `npm run start`. GraphGPT should open up in a new browser tab.
+
+## How to modify GraphGPT
+
+### Download or Fork
+
+![](./assest/img/downloadorfork.png)
+
+### Find a example file
+
+![](./assest/img/exampleprompt.png)
+
+### Test the prompt example
+
+1. text input
+![](./assest/img/unitcode.png)
+
+2. change the color of the node
+![](./assest/img/changenodecolour.png)
+
+3. remove duplicate nodes
+![](./assest/img/removeduplicate.png)
+
+Modify the prompt to make GraphGTP works better!
 
 ## Data
 
