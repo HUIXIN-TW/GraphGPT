@@ -31,17 +31,17 @@ Prompts are located in the `public/prompts` folder.
 - [ ] The graph is not responsive to the size of the window.
 - [x] Stateless and Stateful components require different formatting due to stop symbol.
 
-## Setup
-
-1. Run `npm install` to download required dependencies (currently just [react-graph-vis](https://github.com/crubier/react-graph-vis)).
-2. Make sure you have an [OpenAI API key](https://platform.openai.com/account/api-keys). You will enter this into the web app when running queries.
-3. Run `npm run start`. GraphGPT should open up in a new browser tab.
-
 ## How to install GraphGPT
 
 ### Download or Fork
 
 ![](./assest/img/downloadorfork.png)
+
+### Run web app
+
+1. Run `npm install` to download required dependencies (currently just [react-graph-vis](https://github.com/crubier/react-graph-vis)).
+2. Make sure you have an [OpenAI API key](https://platform.openai.com/account/api-keys). You will enter this into the web app when running queries.
+3. Run `npm run start`. GraphGPT should open up in a new browser tab.
 
 ### Find a example file
 
