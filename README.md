@@ -11,9 +11,6 @@ Successive queries can update the existing state of the graph or create an entir
 
 The current few-shot prompt guides GPT-3 in accurately understanding the JSON formatting GraphGPT requires for proper rendering. You can see the entire prompt in `public/prompts/xxx.prompt`. A major issue at the moment is latency. Due to the nature of OpenAI API calls, it takes up to 20 seconds to receive a response.
 
-## Prompts
-
-Prompts are located in the `public/prompts` folder.
 ## Expected Functions
 
 - [ ] Take csv files as input
@@ -44,6 +41,8 @@ Prompts are located in the `public/prompts` folder.
 3. Run `npm run start`. GraphGPT should open up in a new browser tab.
 
 ### Find a example file
+
+Prompts are located in the `public/prompts` folder.
 
 ![](./assest/img/exampleprompt.png)
 
