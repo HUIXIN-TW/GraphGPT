@@ -11,8 +11,9 @@ const DEFAULT_PARAMS = {
   presence_penalty: 0,
 };
 
-const SELECTED_PROMPT = "STATEFUL"; //"STATELESS
-const FILE_PROMPT = "prompts/example.prompt"; //"prompts/stateless.prompt"; //"prompts/stateful.prompt";
+const SELECTED_PROMPT = "STATELESS"; //"STATELESS
+const FILE_PROMPT = "prompts/example.prompt"; //"prompts/stateful.prompt";
+const FILE_STATELESS_PROMPT = "prompts/stateless.prompt";
 
 const options = {
   layout: {
@@ -131,7 +132,7 @@ function App() {
   };
 
   const queryStatelessPrompt = (prompt, apiKey) => {
-    fetch(FILE_PROMPT)
+    fetch(FILE_STATELESS_PROMPT)
       .then((response) => response.text())
       .then((text) => text.replace("$prompt", prompt))
       .then((prompt) => {
