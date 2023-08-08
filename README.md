@@ -29,6 +29,7 @@ Prompts are located in the `public/prompts` folder.
 - When the input is empty and users click "Generate", the default or random graph will be displayed
 - The Graph zone is not scrollable
 - The graph is not responsive to the size of the window.
+
 ✅ Stateless and Stateful components require different formatting due to stop symbol.
 
 ## Setup
