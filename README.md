@@ -9,7 +9,7 @@ GraphGPT converts unstructured natural language into a knowledge graph. Pass in 
 
 Successive queries can update the existing state of the graph or create an entirely new structure. For example, updating the current state could involve injecting new information through nodes and edges or changing the color of certain nodes.
 
-The current few-shot prompt guides GPT-3 in accurately understanding the JSON formatting GraphGPT requires for proper rendering. You can see the entire prompt in `public/prompts/`xxx`.prompt`. A major issue at the moment is latency. Due to the nature of OpenAI API calls, it takes up to 20 seconds to receive a response.
+The current few-shot prompt guides GPT-3 in accurately understanding the JSON formatting GraphGPT requires for proper rendering. You can see the entire prompt in `public/prompts/xxx.prompt`. A major issue at the moment is latency. Due to the nature of OpenAI API calls, it takes up to 20 seconds to receive a response.
 
 ## Prompts
 
@@ -26,11 +26,10 @@ Prompts are located in the `public/prompts` folder.
 
 ## Possoible Issues
 
-- When the input is empty and users click "Generate", the default or random graph will be displayed
-- The Graph zone is not scrollable
-- The graph is not responsive to the size of the window.
-
-✅ Stateless and Stateful components require different formatting due to stop symbol.
+- [ ] When the input is empty and users click "Generate", the default or random graph will be displayed
+- [ ] The Graph zone is not scrollable
+- [ ] The graph is not responsive to the size of the window.
+- [x] Stateless and Stateful components require different formatting due to stop symbol.
 
 ## Setup
 
@@ -38,7 +37,7 @@ Prompts are located in the `public/prompts` folder.
 2. Make sure you have an [OpenAI API key](https://platform.openai.com/account/api-keys). You will enter this into the web app when running queries.
 3. Run `npm run start`. GraphGPT should open up in a new browser tab.
 
-## How to modify GraphGPT
+## How to install GraphGPT
 
 ### Download or Fork
 
